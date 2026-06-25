@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1120" />
+  <meta name="description" content="E-Load is coming soon — instant prepaid load, data, and e-wallet top-ups for every network. Be the first to know when we launch." />
+  <meta property="og:title" content="E-Load — Instant Top-Ups, Coming Soon" />
+  <meta property="og:description" content="Instant prepaid load, data, and e-wallet top-ups for every network. Be the first to know when we launch." />
+  <meta property="og:type" content="website" />
+  <title>E-Load — Coming Soon</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob blob--one"></span>
+    <span class="blob blob--two"></span>
+    <span class="blob blob--three"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="E-Load home">
+      <img src="assets/logo.svg" alt="" width="36" height="36" />
+      <span class="brand__name">E&#8209;Load</span>
+    </a>
+    <span class="badge">Launching soon</span>
+  </header>
+
+  <main class="hero">
+    <p class="eyebrow">Top-ups, reinvented</p>
+    <h1 class="hero__title">
+      Instant load &amp; data<br />
+      for <span class="gradient-text">every network.</span>
+    </h1>
+    <p class="hero__lead">
+      E&#8209;Load lets you buy prepaid load, mobile data, and e&#8209;wallet
+      credits in seconds — anytime, anywhere. We&rsquo;re putting the
+      finishing touches on something great. Join the list and we&rsquo;ll
+      tell you the moment we go live.
+    </p>
+
+    <section class="countdown" aria-label="Time until launch">
+      <div class="countdown__unit">
+        <span class="countdown__value" data-unit="days">00</span>
+        <span class="countdown__label">Days</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-unit="hours">00</span>
+        <span class="countdown__label">Hours</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-unit="minutes">00</span>
+        <span class="countdown__label">Minutes</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-unit="seconds">00</span>
+        <span class="countdown__label">Seconds</span>
+      </div>
+    </section>
+
+    <form class="notify" id="notify-form" novalidate>
+      <label class="sr-only" for="email">Email address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        inputmode="email"
+        autocomplete="email"
+        placeholder="you@example.com"
+        required
+      />
+      <button type="submit">Notify me</button>
+      <p class="notify__message" id="notify-message" role="status" aria-live="polite"></p>
+    </form>
+
+    <ul class="features">
+      <li class="feature">
+        <span class="feature__icon" aria-hidden="true">&#9889;</span>
+        <h3>Instant delivery</h3>
+        <p>Credits land on the number in seconds, 24/7.</p>
+      </li>
+      <li class="feature">
+        <span class="feature__icon" aria-hidden="true">&#127760;</span>
+        <h3>Every network</h3>
+        <p>All major carriers and e&#8209;wallets in one place.</p>
+      </li>
+      <li class="feature">
+        <span class="feature__icon" aria-hidden="true">&#128274;</span>
+        <h3>Secure payments</h3>
+        <p>Bank-grade encryption on every transaction.</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> E&#8209;Load. All rights reserved.</p>
+    <nav class="socials" aria-label="Social links">
+      <a href="#" aria-label="X (Twitter)">Twitter</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Contact us">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
