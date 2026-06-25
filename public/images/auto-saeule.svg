@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" fill="none" role="img" aria-label="Transporter lädt unterwegs an der Ladesäule">
+  <defs>
+    <linearGradient id="sBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dfe7f7"/>
+      <stop offset="1" stop-color="#aebfe2"/>
+    </linearGradient>
+    <linearGradient id="sVan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cdd7ea"/>
+    </linearGradient>
+    <linearGradient id="sPillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16204a"/>
+      <stop offset="1" stop-color="#0c1330"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#sBg)"/>
+  <circle cx="250" cy="180" r="120" fill="#ffffff" opacity="0.45"/>
+
+  <!-- trees / horizon -->
+  <g fill="#7da06a" opacity="0.55">
+    <circle cx="120" cy="470" r="70"/><circle cx="200" cy="480" r="90"/><circle cx="300" cy="475" r="70"/>
+  </g>
+
+  <!-- ground -->
+  <rect y="540" width="1280" height="260" fill="#9aa8c6"/>
+  <rect y="540" width="1280" height="14" fill="#7e8eb0"/>
+
+  <!-- charging pillar -->
+  <g>
+    <rect x="980" y="300" width="120" height="300" rx="20" fill="url(#sPillar)"/>
+    <rect x="1002" y="330" width="76" height="110" rx="10" fill="#1c34c4"/>
+    <path d="M1048 348 L1028 392 h18 l-6 30 30 -42 h-20 z" fill="#7be857"/>
+    <rect x="980" y="300" width="120" height="12" rx="6" fill="#7be857"/>
+    <!-- cable to van -->
+    <path d="M984 470 C 900 500, 860 500, 812 506" stroke="#0c1330" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- van -->
+  <g>
+    <ellipse cx="500" cy="612" rx="360" ry="34" fill="#000" opacity="0.28"/>
+    <path d="M180 420 L560 420 C 660 420, 720 440, 770 500 L 800 560 C 806 576, 796 588, 780 588 L 196 588 C 184 588, 174 580, 174 568 L 174 440 C 174 428, 184 420, 196 420 Z" fill="url(#sVan)"/>
+    <path d="M196 440 L420 440 L420 512 L182 512 Z" fill="#bcd0f0" opacity="0.7"/>
+    <path d="M560 440 C 640 442, 690 470, 724 512 L 600 512 L 600 440 Z" fill="#bcd0f0" opacity="0.7"/>
+    <!-- brand on the side -->
+    <text x="240" y="556" font-family="Outfit, Arial, sans-serif" font-size="40" font-weight="800" fill="#1c34c4">e&#8209;load <tspan fill="#7be857">me</tspan></text>
+    <circle cx="300" cy="588" r="56" fill="#0c1330"/><circle cx="300" cy="588" r="27" fill="#5b6788"/>
+    <circle cx="636" cy="588" r="56" fill="#0c1330"/><circle cx="636" cy="588" r="27" fill="#5b6788"/>
+  </g>
+
+  <!-- label -->
+  <g transform="translate(64 64)">
+    <rect width="210" height="44" rx="22" fill="#1c34c4" opacity="0.12"/>
+    <circle cx="26" cy="22" r="7" fill="#1c34c4"/>
+    <text x="46" y="29" font-family="Outfit, Arial, sans-serif" font-size="20" font-weight="700" fill="#16204a">Unterwegs laden</text>
+  </g>
+</svg>
