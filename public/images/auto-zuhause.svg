@@ -22,27 +22,16 @@
   <rect width="1280" height="800" fill="url(#hSky)"/>
   <rect width="1280" height="800" fill="url(#hGlow)"/>
 
-  <!-- house -->
-  <path d="M860 250 L1140 250 L1140 560 L860 560 Z" fill="#0f1840" opacity="0.92"/>
-  <path d="M838 250 L1000 152 L1162 250 Z" fill="#1a2660"/>
-  <rect x="900" y="320" width="84" height="120" rx="6" fill="#ffd27a" opacity="0.85"/>
-  <rect x="1036" y="330" width="60" height="90" rx="6" fill="#ffd27a" opacity="0.55"/>
+  <!-- house, sitting on the ground line (y=600) -->
+  <path d="M806 250 L985 152 L1164 250 Z" fill="#1a2660"/>
+  <path d="M830 250 L1140 250 L1140 600 L830 600 Z" fill="#0f1840" opacity="0.94"/>
+  <rect x="900" y="322" width="84" height="120" rx="6" fill="#ffd27a" opacity="0.85"/>
+  <rect x="1034" y="332" width="60" height="92" rx="6" fill="#ffd27a" opacity="0.55"/>
 
   <!-- ground -->
   <rect y="600" width="1280" height="200" fill="#0c1330"/>
   <g stroke="#1a2660" stroke-width="2" opacity="0.6">
     <path d="M120 668 H1160"/><path d="M60 724 H1220"/>
-  </g>
-
-  <!-- wallbox + cable to the car's charge port -->
-  <g>
-    <rect x="790" y="372" width="44" height="86" rx="9" fill="#0c1330"/>
-    <rect x="790" y="372" width="44" height="86" rx="9" fill="none" stroke="#22306a" stroke-width="2"/>
-    <circle cx="812" cy="396" r="6" fill="#7be857"/>
-    <rect x="800" y="416" width="24" height="22" rx="4" fill="#22306a"/>
-    <!-- cable curving down into the charge port on the car's rear flank -->
-    <path d="M810 438 C 800 486, 772 520, 726 540" fill="none" stroke="#0c1330" stroke-width="11" stroke-linecap="round"/>
-    <path d="M810 438 C 800 486, 772 520, 726 540" fill="none" stroke="#1a2660" stroke-width="4" stroke-linecap="round"/>
   </g>
 
   <!-- car (side-view EV sedan) -->
@@ -70,9 +59,8 @@
     <path d="M338 532 L404 470 C408 466 414 463 421 463 L520 463 L520 532 Z" fill="url(#hGlass)" opacity="0.92"/>
     <path d="M540 463 L562 463 C572 463 580 467 586 475 L640 532 L540 532 Z" fill="url(#hGlass)" opacity="0.92"/>
 
-    <!-- charge-port flap on the rear flank where the cable lands -->
+    <!-- charge-port flap on the rear flank -->
     <rect x="700" y="528" width="30" height="26" rx="5" fill="#0c1330"/>
-    <circle cx="715" cy="541" r="6" fill="#7be857"/>
 
     <!-- headlight -->
     <path d="M150 568 L172 566 L172 580 L150 582 Z" fill="#bcd7ff" opacity="0.85"/>
@@ -86,11 +74,18 @@
     <circle cx="600" cy="604" r="26" fill="#5b6788"/>
   </g>
 
-  <!-- label -->
-  <g transform="translate(64 64)">
-    <rect width="190" height="44" rx="22" fill="#ffffff" opacity="0.12"/>
-    <circle cx="26" cy="22" r="7" fill="#7be857"/>
-    <text x="46" y="29" font-family="Outfit, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Zuhause laden</text>
+  <!-- wallbox mounted on the house wall + cable running to the car (drawn on
+       top so it clearly plugs into the charge port) -->
+  <g>
+    <rect x="790" y="386" width="42" height="94" rx="9" fill="#0c1330"/>
+    <rect x="790" y="386" width="42" height="94" rx="9" fill="none" stroke="#2a3a78" stroke-width="2"/>
+    <circle cx="811" cy="410" r="6" fill="#7be857"/>
+    <rect x="800" y="432" width="24" height="22" rx="4" fill="#22306a"/>
+    <!-- cable from the wallbox into the car's charge port -->
+    <path d="M812 454 C 806 502, 772 528, 728 540" fill="none" stroke="#0c1330" stroke-width="12" stroke-linecap="round"/>
+    <path d="M812 454 C 806 502, 772 528, 728 540" fill="none" stroke="#1a2660" stroke-width="4" stroke-linecap="round"/>
+    <!-- connector + status light at the car -->
+    <rect x="716" y="529" width="22" height="22" rx="5" fill="#0c1330"/>
+    <circle cx="727" cy="540" r="4.5" fill="#7be857"/>
   </g>
-  <text x="64" y="744" font-family="Outfit, Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff">e&#8209;load <tspan fill="#7be857">me</tspan></text>
 </svg>

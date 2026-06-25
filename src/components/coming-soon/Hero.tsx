@@ -31,32 +31,23 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-background" />
       </div>
 
+      {/* In-flow brand header. FloatingBrand watches this and docks an
+          identical wordmark to the top-left once it scrolls out of view. */}
+      <header className="mx-auto w-full max-w-6xl px-6 pt-6 sm:pt-8">
+        <span id="hero-brand" className="inline-block">
+          <Wordmark className="text-2xl" />
+        </span>
+      </header>
+
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-20 pt-16 text-center sm:pt-24"
+        className="mx-auto flex max-w-4xl flex-col items-center px-6 pb-24 pt-16 text-center sm:pt-24"
       >
-        {/* Brand lockup: wordmark + live status, watched by FloatingBrand so
-            it can dock to the top-left once this scrolls out of view. */}
-        <motion.div
-          variants={item}
-          id="hero-brand"
-          className="flex flex-col items-center gap-3"
-        >
-          <Wordmark className="text-3xl sm:text-4xl" />
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-white px-4 py-1.5 text-sm font-semibold text-brand-blue shadow-sm">
-            <span className="relative flex size-2.5">
-              <span className="absolute inline-flex size-full rounded-full bg-brand-green opacity-75 [animation:pulse-ring_2.4s_ease-out_infinite]" />
-              <span className="relative inline-flex size-2.5 rounded-full bg-brand-green-deep" />
-            </span>
-            Demnächst verfügbar
-          </span>
-        </motion.div>
-
         <motion.h1
           variants={item}
-          className="mt-9 text-balance text-5xl text-brand-blue-ink sm:text-6xl md:text-7xl"
+          className="text-balance text-5xl text-brand-blue-ink sm:text-6xl md:text-7xl"
         >
           Guten Tag!
           <span className="mt-2 block gradient-text">

@@ -42,11 +42,4 @@
       <path d="M92 -18 a58 58 0 0 1 0 88" stroke="#7be857" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.5"/>
     </g>
   </g>
-
-  <!-- label -->
-  <g transform="translate(64 64)">
-    <rect width="200" height="44" rx="22" fill="#1c34c4" opacity="0.10"/>
-    <circle cx="26" cy="22" r="7" fill="#1c34c4"/>
-    <text x="46" y="29" font-family="Outfit, Arial, sans-serif" font-size="20" font-weight="700" fill="#1c34c4">B2B Ladekarte</text>
-  </g>
 </svg>

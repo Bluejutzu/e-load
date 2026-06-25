@@ -38,17 +38,9 @@ export function FloatingBrand() {
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={reduce ? { opacity: 0 } : { opacity: 0, x: -24, y: -16 }}
           transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed left-4 top-4 z-50 inline-flex items-center gap-2.5 rounded-full border border-border bg-white/85 px-4 py-2 shadow-lg shadow-brand-blue/10 backdrop-blur-md sm:left-6 sm:top-6"
+          className="fixed left-4 top-4 z-50 inline-flex items-center rounded-full border border-border bg-white/85 px-4 py-2 shadow-lg shadow-brand-blue/10 backdrop-blur-md sm:left-6 sm:top-6"
         >
           <Wordmark className="text-lg" />
-          <span
-            aria-hidden
-            className="relative flex size-2"
-            title="Demnächst verfügbar"
-          >
-            <span className="absolute inline-flex size-full rounded-full bg-brand-green opacity-75 [animation:pulse-ring_2.4s_ease-out_infinite]" />
-            <span className="relative inline-flex size-2 rounded-full bg-brand-green-deep" />
-          </span>
         </motion.a>
       ) : null}
     </AnimatePresence>
