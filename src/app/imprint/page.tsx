@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 
-import { LegalShell, LegalCard } from "@/components/LegalShell";
+import {
+  LegalShell,
+  LegalCard,
+  MailLink,
+  TelLink,
+  PostalAddress,
+} from "@/components/LegalShell";
 
 export const metadata: Metadata = {
   title: "Impressum",
@@ -12,19 +18,19 @@ export default function ImprintPage() {
     <LegalShell title="Impressum">
       <LegalCard title="Angaben gemäß § 5 TMG">
         <p className="font-semibold text-brand-blue-ink">Advantis GmbH</p>
-        <p>Herboldshoferstrasse 13</p>
-        <p>90427 Nürnberg</p>
-        <p>Deutschland</p>
+        <PostalAddress
+          lines={["Herboldshoferstrasse 13", "90427 Nürnberg", "Deutschland"]}
+        />
       </LegalCard>
 
       <LegalCard title="Kontakt">
         <p>
           <span className="font-semibold text-brand-blue-ink">E-Mail:</span>{" "}
-          touch@advantisgroup.de
+          <MailLink email="touch@advantisgroup.de" />
         </p>
         <p>
           <span className="font-semibold text-brand-blue-ink">Telefon:</span>{" "}
-          0911 37753859
+          <TelLink display="0911 37753859" dial="+4991137753859" />
         </p>
       </LegalCard>
 
@@ -51,7 +57,7 @@ export default function ImprintPage() {
       <LegalCard title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">
         <p>Andrea Reichl</p>
         <p>Advantis GmbH</p>
-        <p>Herboldshoferstrasse 13, 90427 Nürnberg</p>
+        <PostalAddress lines={["Herboldshoferstrasse 13, 90427 Nürnberg"]} />
       </LegalCard>
     </LegalShell>
   );

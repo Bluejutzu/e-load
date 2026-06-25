@@ -6,6 +6,7 @@ import { ArrowLeft } from "lucide-react";
 
 import { SiteFooter } from "@/components/SiteFooter";
 import { Wordmark } from "@/components/Wordmark";
+import { cn } from "@/lib/utils";
 
 /**
  * Layout for the legal pages. There is no site-wide navigation header; this
@@ -66,5 +67,59 @@ export function LegalCard({
         {children}
       </div>
     </section>
+  );
+}
+
+const contactLink =
+  "font-medium text-brand-blue underline-offset-4 transition-colors hover:text-brand-blue-deep hover:underline";
+
+/** `mailto:` link for an e-mail address. */
+export function MailLink({ email }: { email: string }) {
+  return (
+    <a href={`mailto:${email}`} className={contactLink}>
+      {email}
+    </a>
+  );
+}
+
+/**
+ * `tel:` link. `display` is the human-readable number; `dial` is the E.164
+ * value used in the href (e.g. "+4991137753859").
+ */
+export function TelLink({ display, dial }: { display: string; dial: string }) {
+  return (
+    <a href={`tel:${dial}`} className={contactLink}>
+      {display}
+    </a>
+  );
+}
+
+/**
+ * Postal address rendered in a semantic `<address>` and linked to a map
+ * search so it can be opened in the visitor's maps app.
+ */
+export function PostalAddress({
+  lines,
+  className,
+}: {
+  lines: string[];
+  className?: string;
+}) {
+  const query = encodeURIComponent(lines.join(", "));
+  return (
+    <address className={cn("not-italic", className)}>
+      <a
+        href={`https://www.google.com/maps/search/?api=1&query=${query}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={contactLink}
+      >
+        {lines.map((line, i) => (
+          <span key={i} className="block">
+            {line}
+          </span>
+        ))}
+      </a>
+    </address>
   );
 }

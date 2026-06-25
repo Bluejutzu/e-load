@@ -1,15 +1,9 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowUpRight, Home, MapPin, Briefcase, Zap } from "lucide-react";
+import { ArrowUpRight, Zap } from "lucide-react";
 
 import { Wordmark } from "@/components/Wordmark";
-
-const scenarios = [
-  { icon: MapPin, label: "On the Road" },
-  { icon: Briefcase, label: "At Work" },
-  { icon: Home, label: "At Home" },
-];
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -28,7 +22,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section id="top" className="relative isolate overflow-hidden">
       {/* background */}
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute inset-0 grid-pattern opacity-70" />
@@ -43,24 +37,26 @@ export function Hero() {
         animate="show"
         className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-20 pt-16 text-center sm:pt-24"
       >
-        <motion.div variants={item}>
-          <Wordmark className="text-3xl sm:text-4xl" />
-        </motion.div>
-
+        {/* Brand lockup: wordmark + live status, watched by FloatingBrand so
+            it can dock to the top-left once this scrolls out of view. */}
         <motion.div
           variants={item}
-          className="mt-10 inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-white px-4 py-1.5 text-sm font-semibold text-brand-blue shadow-sm"
+          id="hero-brand"
+          className="flex flex-col items-center gap-3"
         >
-          <span className="relative flex size-2.5">
-            <span className="absolute inline-flex size-full rounded-full bg-brand-green opacity-75 [animation:pulse-ring_2.4s_ease-out_infinite]" />
-            <span className="relative inline-flex size-2.5 rounded-full bg-brand-green-deep" />
+          <Wordmark className="text-3xl sm:text-4xl" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-white px-4 py-1.5 text-sm font-semibold text-brand-blue shadow-sm">
+            <span className="relative flex size-2.5">
+              <span className="absolute inline-flex size-full rounded-full bg-brand-green opacity-75 [animation:pulse-ring_2.4s_ease-out_infinite]" />
+              <span className="relative inline-flex size-2.5 rounded-full bg-brand-green-deep" />
+            </span>
+            Demnächst verfügbar
           </span>
-          Demnächst verfügbar
         </motion.div>
 
         <motion.h1
           variants={item}
-          className="mt-7 text-balance text-5xl text-brand-blue-ink sm:text-6xl md:text-7xl"
+          className="mt-9 text-balance text-5xl text-brand-blue-ink sm:text-6xl md:text-7xl"
         >
           Guten Tag!
           <span className="mt-2 block gradient-text">
@@ -78,21 +74,6 @@ export function Hero() {
           Mit uns lädt deine Flotte zum Bestpreis – egal ob on the road, Work
           oder Home.
         </motion.p>
-
-        <motion.div
-          variants={item}
-          className="mt-9 flex flex-wrap items-center justify-center gap-3"
-        >
-          {scenarios.map(({ icon: Icon, label }) => (
-            <span
-              key={label}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-brand-blue-ink shadow-sm"
-            >
-              <Icon className="size-4 text-brand-green-deep" />
-              {label}
-            </span>
-          ))}
-        </motion.div>
 
         <motion.div
           variants={item}

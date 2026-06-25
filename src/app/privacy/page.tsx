@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 
-import { LegalShell, LegalCard } from "@/components/LegalShell";
+import {
+  LegalShell,
+  LegalCard,
+  MailLink,
+  TelLink,
+  PostalAddress,
+} from "@/components/LegalShell";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
@@ -44,9 +50,13 @@ export default function PrivacyPage() {
             Advantis GmbH
           </p>
           <p>Andrea Reichl</p>
-          <p>Herboldshoferstrasse 13, 90427 Nürnberg</p>
-          <p className="mt-2">E-Mail: touch@advantisgroup.de</p>
-          <p>Telefon: 0911 37753859</p>
+          <PostalAddress lines={["Herboldshoferstrasse 13, 90427 Nürnberg"]} />
+          <p className="mt-2">
+            E-Mail: <MailLink email="touch@advantisgroup.de" />
+          </p>
+          <p>
+            Telefon: <TelLink display="0911 37753859" dial="+4991137753859" />
+          </p>
         </div>
       </LegalCard>
 

@@ -1,6 +1,14 @@
 import Image from "next/image";
 
+import { Home, MapPin, Briefcase } from "lucide-react";
+
 import { Reveal } from "@/components/Reveal";
+
+const scenarios = [
+  { icon: MapPin, label: "On the Road" },
+  { icon: Briefcase, label: "At Work" },
+  { icon: Home, label: "At Home" },
+];
 
 const shots = [
   {
@@ -34,6 +42,18 @@ export function Showcase() {
           On the road, am Arbeitsplatz oder zu Hause – mit einer Karte, einem
           Tarif und einem Netz, das mitwächst.
         </p>
+
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          {scenarios.map(({ icon: Icon, label }) => (
+            <span
+              key={label}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-brand-blue-ink shadow-sm"
+            >
+              <Icon className="size-4 text-brand-green-deep" />
+              {label}
+            </span>
+          ))}
+        </div>
       </Reveal>
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
