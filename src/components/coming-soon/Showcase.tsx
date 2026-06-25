@@ -12,8 +12,8 @@ const scenarios = [
 
 const shots = [
   {
-    src: "/images/auto-zuhause.svg",
-    alt: "Elektroauto lädt zuhause an der Wallbox",
+    src: "/images/car_charging_home.png",
+    alt: "Elektroauto lädt zuhause an der Wallbox in der Einfahrt",
     title: "Zuhause",
     copy: "Über Nacht voll – die Wallbox in der eigenen Einfahrt ist immer dabei.",
   },
@@ -24,8 +24,8 @@ const shots = [
     copy: "Eine Ladekarte für die ganze Flotte – transparent abgerechnet, zum Bestpreis.",
   },
   {
-    src: "/images/auto-saeule.svg",
-    alt: "Transporter lädt unterwegs an der Ladesäule",
+    src: "/images/car_charging_station.png",
+    alt: "Elektro-Transporter lädt unterwegs an einer Ladesäule",
     title: "Unterwegs",
     copy: "Bis zu eine Million Ladepunkte in ganz Europa – einfach anstecken und los.",
   },
@@ -65,9 +65,8 @@ export function Showcase() {
                   src={shot.src}
                   alt={shot.alt}
                   fill
-                  unoptimized
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1152px) 50vw, 384px"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>
               <figcaption className="space-y-2 p-6">
