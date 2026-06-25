@@ -4,27 +4,27 @@ import { LegalShell, LegalCard } from "@/components/LegalShell";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum der Advantis Group GmbH – Anbieter von e-load me.",
+  description: "Impressum der Advantis GmbH – Anbieter von e-load me.",
 };
 
 export default function ImprintPage() {
   return (
     <LegalShell title="Impressum">
       <LegalCard title="Angaben gemäß § 5 TMG">
-        <p className="font-semibold text-brand-blue-ink">Advantis Group GmbH</p>
-        <p>[Straße &amp; Hausnummer]</p>
-        <p>[PLZ Ort]</p>
+        <p className="font-semibold text-brand-blue-ink">Advantis GmbH</p>
+        <p>Herboldshoferstrasse 13</p>
+        <p>90427 Nürnberg</p>
         <p>Deutschland</p>
       </LegalCard>
 
       <LegalCard title="Kontakt">
         <p>
           <span className="font-semibold text-brand-blue-ink">E-Mail:</span>{" "}
-          [folgt]
+          touch@advantisgroup.de
         </p>
         <p>
           <span className="font-semibold text-brand-blue-ink">Telefon:</span>{" "}
-          [folgt]
+          0911 37753859
         </p>
       </LegalCard>
 
@@ -50,8 +50,8 @@ export default function ImprintPage() {
 
       <LegalCard title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">
         <p>Andrea Reichl</p>
-        <p>Advantis Group GmbH</p>
-        <p>[Straße &amp; Hausnummer], [PLZ Ort]</p>
+        <p>Advantis GmbH</p>
+        <p>Herboldshoferstrasse 13, 90427 Nürnberg</p>
       </LegalCard>
     </LegalShell>
   );

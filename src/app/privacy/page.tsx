@@ -5,7 +5,7 @@ import { LegalShell, LegalCard } from "@/components/LegalShell";
 export const metadata: Metadata = {
   title: "Datenschutz",
   description:
-    "Datenschutzerklärung der Advantis Group GmbH für e-load me gemäß DSGVO.",
+    "Datenschutzerklärung der Advantis GmbH für e-load me gemäß DSGVO.",
 };
 
 export default function PrivacyPage() {
@@ -41,11 +41,12 @@ export default function PrivacyPage() {
         <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
         <div className="mt-2 rounded-xl bg-muted p-5">
           <p className="font-semibold text-brand-blue-ink">
-            Advantis Group GmbH
+            Advantis GmbH
           </p>
           <p>Andrea Reichl</p>
-          <p>[Straße &amp; Hausnummer], [PLZ Ort]</p>
-          <p className="mt-2">E-Mail: [folgt]</p>
+          <p>Herboldshoferstrasse 13, 90427 Nürnberg</p>
+          <p className="mt-2">E-Mail: touch@advantisgroup.de</p>
+          <p>Telefon: 0911 37753859</p>
         </div>
       </LegalCard>
 
