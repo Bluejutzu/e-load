@@ -50,7 +50,7 @@ export function SiteFooter() {
           <p className="text-white/55">
             Ein Angebot der{" "}
             <span className="font-semibold text-white/80">
-              Advantis Group GmbH
+              Advantis GmbH
             </span>
           </p>
         </div>
@@ -58,7 +58,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-white/45 sm:flex-row">
-          <p>© {year} Advantis Group GmbH. Alle Rechte vorbehalten.</p>
+          <p>© {year} Advantis GmbH. Alle Rechte vorbehalten.</p>
           <p>
             Betrieben und im Eigentum der{" "}
             <a
@@ -67,7 +67,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="font-medium text-white/70 underline-offset-4 hover:text-white hover:underline"
             >
-              Advantis Group
+              Advantis GmbH
             </a>
             .
           </p>
